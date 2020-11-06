@@ -3,67 +3,45 @@ const { schema } = require('./User');
 const Schema  = mongoose.Schema;
 
 const QuestSchema  = new Schema({
-
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'
-    },
-    text: {
+    catname: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
-    name: {
-        type: String
-    },
-    category: [
+    questions: [
         {
-            name: {
+            user: {
+                type: Schema.Types.ObjectId,
+                ref: 'users'
+            },
+            qtext: {
                 type: String,
                 required: true
             },
-            questions: [
+            date: {
+                type: Date,
+                default: Date.now
+            },
+            answers: [
                 {
                     user: {
                         type: Schema.Types.ObjectId,
                         ref: 'users'
                     },
-                    text: {
+                    atext: {
                         type: String,
                         required: true
-                    },
-                    id: {
-                        type: String
                     },
                     date: {
                         type: Date,
                         default: Date.now
-                    },
-                    answers: [
-                        {
-                            user: {
-                                type: Schema.Types.ObjectId,
-                                ref: 'users'
-                            },
-                            text: {
-                                type: String,
-                                required: true
-                            },
-                            id: {
-                                type: String
-                            },
-                            date: {
-                                type: Date,
-                                default: Date.now
-                            }
-                        }
-                    ]
+                    }
                 }
-            ]            
+            ]
         }
-    ]
+    ]            
 });
 
-
-const Quest = mongoose.model('Quest',PostSchema);
+const Quest = mongoose.model('Quest', QuestSchema);
 
 module.exports = Quest;
