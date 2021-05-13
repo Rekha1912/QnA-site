@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar= () => {
     return (
         <nav className = "jumbotron bg-dark">
             <div className = "navbar">
                 <h1> 
-                    <a href = "index.html">
-                        Home
-                    </a>
+                    <Link to = '/'>
+                        Travelpedia
+                    </Link>
                 </h1>
                 <ul>
                     <li>
-                        <a href = "register.html"> Register </a>
+                        <Link to = '/register'> Register </Link>
                     </li>
                     <li>
-                        <a href = "login.html"> Login </a>
+                        <Link to = '/login'> Login </Link>
                     </li>
                 </ul>
             </div>
