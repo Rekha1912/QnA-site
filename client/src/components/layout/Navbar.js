@@ -9,8 +9,15 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
         <ul>
             <li>
+                <Link to = '/quests'> Questions </Link>
+            </li>
+            <li>
+                <Link to = '/dashboard'> 
+                <i className ="fas fa-globe"></i>{'  '} DASHBOARD </Link>
+            </li>
+            <li>
                 <a onClick={logout} href='#!'>
-                    <i className= "fas fa-sign-out-alt"></i>{'  '} Logout  </a>
+                    <i className ="fas fa-power-off"></i>{'  '} LOGOUT  </a>
             </li>
         </ul>
     );
@@ -31,7 +38,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <div className = "navbar">
                 <h1> 
                     <Link to = '/'>
-                        Travelpedia
+                        <i className="fas fa-paper-plane"></i>{'  '}Travelpedia
                     </Link>
                 </h1>
                 { !loading && (<Fragment> { isAuthenticated ? authLinks : guestLinks } </Fragment>)}

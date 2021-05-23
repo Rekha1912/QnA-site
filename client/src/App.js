@@ -6,6 +6,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
+import Quests from './components/quests/Quests';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 
@@ -38,6 +39,7 @@ const App = () => {
             <Route exact path = '/register' component = {Register} />
             <Route exact path = '/login' component = {Login} />
             <PrivateRoute exact path = '/dashboard' component = {Dashboard} />
+            <PrivateRoute exact path = '/quests' component = {Quests} />
           </Switch>
         </section>
       </Fragment>

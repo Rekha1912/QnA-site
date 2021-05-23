@@ -11,7 +11,10 @@ import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 */
 
 const Dashboard = props => {
-    return <div> Dashboard </div>;
+    return <Fragment> 
+        <h1> Dashboard </h1>
+    </Fragment>
+
 };
 
 Dashboard.propTypes = {};
