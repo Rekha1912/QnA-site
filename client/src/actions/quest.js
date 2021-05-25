@@ -5,7 +5,7 @@ import { GET_QUESTS, QUEST_ERROR } from './types';
 // Get quest
 export const getQuests = () => async dispatch => {
     try {
-        const res = await axios.get('/api/quests');
+        const res = await axios.get('/api/quests?catname=USA');
         dispatch({
             type: GET_QUESTS,
             payload: res.data
