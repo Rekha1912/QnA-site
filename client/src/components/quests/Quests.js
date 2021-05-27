@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import QuestItem from './QuestItem';
 import { getQuests } from '../../actions/quest'
+import QuestForm from './QuestForm';
 
 const Quests = ({ getQuests, quest: { quests, loading } }) => {
     useEffect(() => {
@@ -11,12 +12,12 @@ const Quests = ({ getQuests, quest: { quests, loading } }) => {
 
     return <Fragment>
         <h1> Questions </h1>
+        <QuestForm />
         <div>
             {quests.map(quest => (
                 <QuestItem key={quest._id} quest={quest} />
             ))}
         </div>
-
     </Fragment>;
 };
 

@@ -1,4 +1,4 @@
-import { GET_QUESTS, QUEST_ERROR } from '../actions/types';
+import { GET_QUESTS, QUEST_ERROR, ADD_QUEST } from '../actions/types';
 
 
 const initialState = {
@@ -16,6 +16,12 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 quests: payload,
+                loading: false
+            };
+        case ADD_QUEST:
+            return {
+                ...state,
+                quests: [payload,...state.quests],
                 loading: false
             };
         case QUEST_ERROR:

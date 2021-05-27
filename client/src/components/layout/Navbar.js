@@ -13,10 +13,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <i className ="fas fa-globe"></i>{'    '} DASHBOARD </Link>
             </li>
             <li>
-                <Link to = '/quests'> 
-                <i class="far fa-clipboard"></i>{'     '}QUESTIONS </Link>
-            </li>
-            <li>
                 <a onClick={logout} href='#!'>
                     <i className ="fas fa-power-off"></i>{'    '} LOG OUT  </a>
             </li>

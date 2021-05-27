@@ -9,8 +9,14 @@ const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtex
 }) => 
         <div>
             <h3> Category {catname} </h3>
-            <h2> {user} </h2>
-
+            <h2>  {questions.map(item => (
+                <div>
+                    <div>{item.qtext}</div>
+                    <div>{item.answers.map(aitem => (
+                        <div>{aitem.atext}</div>
+                    ))}</div>
+                </div>
+            ))} </h2>
         </div>
 
 QuestItem.propTypes = {
