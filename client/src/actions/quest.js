@@ -3,9 +3,9 @@ import { setAlert } from './alert';
 import { GET_QUESTS, QUEST_ERROR, ADD_QUEST } from './types';
 
 // Get quest
-export const getQuests = () => async dispatch => {
+export const getQuests = (catName) => async dispatch => {
     try {
-        const res = await axios.get('/api/quests?catname=USA');
+        const res = await axios.get('/api/quests?catname='+catName);
         dispatch({
             type: GET_QUESTS,
             payload: res.data

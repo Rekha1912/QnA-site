@@ -37,10 +37,11 @@ body {
     font-size: larger;
 }
 a {
-    color: white;
+    color: salmon;
+    font-weight: bolder;
 }
 a:hover {
-    color: white;
+    color: salmon;
 }
 ul {
     list-style: none;
@@ -50,7 +51,7 @@ ul {
 .footer {
     padding: 20px;
     margin-top:50px;
-    color: white;
+    color: salmon;
     text-align: center;
 }
 .loginbox {
@@ -80,7 +81,49 @@ ul {
 }
 .catcol {
     padding: 20px;
-    padding-left:100px ;
+    float: clear;
+    text-align: center;
+}
+.catbtn {
+    padding: 1vw;
+    color: black;
+}
+.catbtn:hover {
+    background-color: darkturquoise;
+    color: black;
+}
+.qnatext {
     float: left;
-    text-align: left;
+    padding-left: 10vw;
+}
+.btn {
+    background-color:lightcoral;
+    font-weight: bold;
+}
+.ubt {
+    background-color:lightgreen;
+    padding: 10px;
+    width: 100%;
+}
+.ibt {
+    background-color: lightgreen;
+    padding: 10px;
+    width: 100%;
+}
+.fbt {
+    background-color: lightgreen;
+    padding: 10px;
+    width: 100%;
+}
+.bbt {
+    background-color: lightgreen;
+    padding: 10px;
+    width: 100%;
+}
+.mainblock {
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing:2px;
+}
+.atxt {
+    padding-left:20%;
 }

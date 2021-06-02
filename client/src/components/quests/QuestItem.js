@@ -7,16 +7,16 @@ import { connect } from 'react-redux';
 
 const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtext, atext, date } 
 }) => 
-        <div>
-            <h3> Category {catname} </h3>
-            <h2>  {questions.map(item => (
+        <div className="mainblock">
+            <h2> {catname} </h2>
+            <h3>  {questions.map(item => (
                 <div>
-                    <div>{item.qtext}</div>
+                    <div>{item.qtext}</div> 
                     <div>{item.answers.map(aitem => (
-                        <div>{aitem.atext}</div>
-                    ))}</div>
-                </div>
-            ))} </h2>
+                        <div className="atxt">{aitem.atext}</div>
+                    ))}</div> <br></br>
+                </div> 
+            ))} </h3>
         </div>
 
 QuestItem.propTypes = {
