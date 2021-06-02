@@ -10,7 +10,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <ul>
             <li>
                 <Link to = '/quests'> 
-                <i className ="fas fa-globe"></i>{'    '} DASHBOARD </Link>
+                <i className ="fas fa-globe"></i>{'    '} HOME </Link>
             </li>
             <li>
                 <a onClick={logout} href='#!'>

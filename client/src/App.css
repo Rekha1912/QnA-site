@@ -125,5 +125,9 @@ ul {
     letter-spacing:2px;
 }
 .atxt {
-    padding-left:20%;
+    padding-left:10%;
+}
+.date {
+    font-size: medium;
+    padding-left:10%;
 }
