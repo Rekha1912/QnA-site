@@ -126,8 +126,12 @@ ul {
 }
 .atxt {
     padding-left:10%;
+    font-size: 23px;
 }
 .date {
     font-size: medium;
     padding-left:10%;
+}
+.anstxt {
+    padding-left: 10%;
 }

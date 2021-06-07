@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import QuestItem from './QuestItem';
 import { getQuests } from '../../actions/quest'
+import quest from '../../reducers/quest';
 
 const Quests = ({ getQuests, quest: { quests, loading } }) => {
     useEffect(() => {
@@ -29,7 +30,7 @@ const Quests = ({ getQuests, quest: { quests, loading } }) => {
                         <QuestItem key={quest._id} quest={quest} />
                     ))}
                 </div>
-        </Fragment>;
+    </Fragment>;
 };
 
 Quests.propTypes = {

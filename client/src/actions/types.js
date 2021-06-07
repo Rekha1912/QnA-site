@@ -10,3 +10,4 @@ export const LOGOUT = 'LOGOUT';
 export const GET_QUESTS = 'GET_QUESTS';
 export const QUEST_ERROR = 'QUEST_ERROR';
 export const ADD_QUEST = 'ADD_QUEST';
+export const ADD_ANS = 'ADD_ANS';
