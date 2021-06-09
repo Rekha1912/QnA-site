@@ -6,6 +6,7 @@ import { addQuests } from '../../actions/quest';
 
 const QuestForm = ({ addQuests }) => {
     const [qtext, setText] = useState('');
+    const [id, setCatName] = useState('');
 
     return (
         <div>
@@ -13,18 +14,19 @@ const QuestForm = ({ addQuests }) => {
         
             <form onSubmit={e => {
                 e.preventDefault();
-                addQuests({qtext});
+                addQuests({qtext,id});
                 setText('');
+                setCatName('');
             }}>
                 <div class="dropdown">
-                    <button type="button" class=" dropdown-toggle" data-toggle="dropdown"> SELECT COUNTRY </button>
-                    <div class="dropdown-menu">
-                        <p class="dropdown-item" href="#"> USA </p>
-                        <p class="dropdown-item" href="#"> INDIA </p>
-                        <p class="dropdown-item" href="#"> FRANCE </p>
-                        <p class="dropdown-item" href="#"> BRAZIL </p>
-                        <p class="dropdown-item" href="#"> ITALY</p>
-                    </div>
+                    
+                    <select value={id} onChange={e => setCatName(e.target.value)} name="catname">
+                        <option value="5fa481a0c883373afce1c732">USA</option>
+                        <option value="5fa478ad34fab71fe020cc06">INDIA</option>
+                        <option value="5fa481ecc883373afce1c734">FRANCE</option>
+                        <option value="5fa4822fc883373afce1c736">BRAZIL</option>
+                        <option value="5fa4820bc883373afce1c735">ITALY</option>
+                    </select>
                 </div>
                 <textarea
                     name="text"

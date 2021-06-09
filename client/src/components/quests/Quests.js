@@ -6,7 +6,7 @@ import QuestItem from './QuestItem';
 import { getQuests } from '../../actions/quest'
 import quest from '../../reducers/quest';
 
-const Quests = ({ getQuests, quest: { quests, loading } }) => {
+const Quests = ({ getQuests, quest: { quests, loading }}) => {
     useEffect(() => {
        // getQuests();
     }, [getQuests]);

@@ -7,13 +7,13 @@ import AnsForm from './AnsForm';
 import quest from '../../reducers/quest';
 
 
-const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtext, atext, date } 
-}) => 
+const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtext, atext, date } }) => 
         <div className="mainblock">
-            <h2> ==> {catname} </h2>
+            <h2> {catname} </h2>
             <h3> {questions.map(item => (
                 <div>
                     <div> <li> {item.qtext} </li> 
+                    <h2> name </h2>
                         <p className="date"> Posted on <Moment format='YY/MM/DD'>{item.date}</Moment></p>
                         <AnsForm questId={quest._id} /> 
                     </div>
@@ -26,6 +26,7 @@ const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtex
                 </div> 
             ))} </h3>
         </div>
+        
 
 QuestItem.propTypes = {
     quest: PropTypes.object.isRequired,

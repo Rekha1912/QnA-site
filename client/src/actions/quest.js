@@ -26,7 +26,7 @@ export const addQuests = FormData => async dispatch => {
         }
     };
     try {
-        const res = await axios.post('/api/quests', FormData, config);
+        const res = await axios.post('/api/quests/qpost', FormData, config);
         
         dispatch({
             type: ADD_QUEST,
