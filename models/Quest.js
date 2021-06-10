@@ -14,6 +14,10 @@ const QuestSchema  = new Schema({
                 type: Schema.Types.ObjectId,
                 ref: 'users'
             },
+            username:{
+                type: String,
+                required: false
+            },
             qtext: {
                 type: String,
                 required: true
@@ -27,6 +31,10 @@ const QuestSchema  = new Schema({
                     user: {
                         type: Schema.Types.ObjectId,
                         ref: 'users'
+                    },
+                    username:{
+                        type: String,
+                        required: false
                     },
                     atext: {
                         type: String,

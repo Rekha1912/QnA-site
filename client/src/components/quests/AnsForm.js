@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addAns } from '../../actions/quest';
 
-const AnsForm = ({ questId, addAns }) => {
+const AnsForm = ({ catId, questId, addAns }) => {
     const [atext, setText] = useState('');
 
     return (
         <div className="anstxt">        
             <form onSubmit={e => {
                 e.preventDefault();
-                addAns(questId,{atext});
+                addAns(catId, questId,{atext});
                 setText('');
             }}>
                 <textarea

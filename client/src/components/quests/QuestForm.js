@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addQuests } from '../../actions/quest';
 
-
 const QuestForm = ({ addQuests }) => {
     const [qtext, setText] = useState('');
     const [id, setCatName] = useState('');
@@ -11,7 +10,6 @@ const QuestForm = ({ addQuests }) => {
     return (
         <div>
             <h3> Add Questions... </h3> <br></br>
-        
             <form onSubmit={e => {
                 e.preventDefault();
                 addQuests({qtext,id});
@@ -19,7 +17,6 @@ const QuestForm = ({ addQuests }) => {
                 setCatName('');
             }}>
                 <div class="dropdown">
-                    
                     <select value={id} onChange={e => setCatName(e.target.value)} name="catname">
                         <option value="5fa481a0c883373afce1c732">USA</option>
                         <option value="5fa478ad34fab71fe020cc06">INDIA</option>

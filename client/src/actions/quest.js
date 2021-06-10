@@ -42,14 +42,14 @@ export const addQuests = FormData => async dispatch => {
 };
 
 // ADD ans
-export const addAns = (questID, FormData) => async dispatch => {
+export const addAns = (catId, questID, FormData) => async dispatch => {
     const config = {
         headers: {
             'Content-Type': 'application/json'
         }
     };
     try {
-        const res = await axios.post('/api/quests/ans/${questID}', FormData, config);
+        const res = await axios.post('/api/quests/apost?qid='+questID+"&catid="+catId, FormData, config);
         
         dispatch({
             type: ADD_ANS,
