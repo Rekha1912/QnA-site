@@ -13,16 +13,18 @@ const AnsForm = ({ catId, questId, addAns }) => {
                 addAns(catId, questId,{atext});
                 setText('');
             }}>
-                <textarea
-                    name="text"
-                    cols="15"
-                    rows="2"
-                    placeholder="Add Answer"
-                    value={atext}
-                    onChange={e => setText(e.target.value)}
-                    required>
-                </textarea> <br></br>
-                <input type="submit" class="btn btn-dark" value="SUBMIT" />
+                <div>
+                    <textarea
+                        name="text"
+                        cols="15"
+                        rows="2"
+                        placeholder="Add Answer"
+                        value={atext}
+                        onChange={e => setText(e.target.value)}
+                        required>
+                    </textarea> <br></br>
+                    <input type="submit" class="btn btn-dark abt" value="SUBMIT" />
+                </div>
             </form>
         </div>
     )

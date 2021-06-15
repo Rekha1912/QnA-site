@@ -124,9 +124,16 @@ ul {
     font-family: 'Brush Script MT', cursive;
     letter-spacing:2px;
 }
+.qtxt {
+    color: red;
+    font-weight: bolder;
+}
 .atxt {
+    color: mediumblue;
     padding-left:10%;
     font-size: 23px;
+    font-weight: bolder;
+    margin: 15px;
 }
 .date {
     font-size: medium;
@@ -135,7 +142,9 @@ ul {
 .anstxt {
     padding-left: 10%;
 }
-.uname {
-    font-size: medium;
-    padding-left:10%;
+.uname{
+    font-style: italic;
+}
+.abt {
+    background-color: gray;
 }
