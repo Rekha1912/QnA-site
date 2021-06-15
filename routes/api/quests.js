@@ -78,10 +78,11 @@ router.post(
     try {
       const user = await User.findById(req.user.id).select('-password');
       const category = await Quest.findById(req.body.id);
-      
+  
       const questpost = {
             qtext: req.body.qtext,
-            user: req.user.id
+            user: req.user.id,
+            username: user.name
           };
       
       category.questions.unshift(questpost);
@@ -111,21 +112,20 @@ router.post(
         }
 
     try {
+      const ansobject = url.parse(req.url,true).query;
       const user = await User.findById(req.user.id).select('-password');
-      const question = await Quest.findById(req.body.id);
-      
+      const question = await Quest.findById(ansobject.catid);
       const answerpost = {
             atext: req.body.atext,
-            user: req.user.id
+            user: req.user.id,
+            username: user.name
           };
       
       question.questions.forEach(function(element) {
-        if(element['_id'] == req.body.qid){
+        if(element['_id'] == ansobject.qid){
           element.answers.unshift(answerpost);
         }
       });
-      
-
       await question.save();
       res.json(question.questions);
 

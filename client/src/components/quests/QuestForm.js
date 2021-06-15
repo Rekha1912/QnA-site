@@ -18,7 +18,9 @@ const QuestForm = ({ addQuests }) => {
             }}>
                 <div class="dropdown">
                     <select value={id} onChange={e => setCatName(e.target.value)} name="catname">
-                        <option value="5fa481a0c883373afce1c732">USA</option>
+                        <option value="">Select Country </option>
+                        <option value="60c7d08f94bd82377c6947c1">USA</option>
+                        <option value="60c7d01a94bd82377c6947c0">CANADA</option>
                         <option value="5fa478ad34fab71fe020cc06">INDIA</option>
                         <option value="5fa481ecc883373afce1c734">FRANCE</option>
                         <option value="5fa4822fc883373afce1c736">BRAZIL</option>

@@ -4,6 +4,7 @@ import { GET_QUESTS, QUEST_ERROR, ADD_QUEST, ADD_ANS } from '../actions/types';
 const initialState = {
     quests: [],
     quest: null,
+    auth: null,
     loading: true,
     error:{}
 }

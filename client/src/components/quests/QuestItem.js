@@ -10,17 +10,16 @@ import quest from '../../reducers/quest';
 const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtext, atext, date } }) =>
         <div className="mainblock">
             <h2> {catname} </h2>
-            <h3> {questions.map(item => (
+            <h3> {questions !== undefined && questions.map(item => (
                 <div>
-                    <div> <li> {item.qtext} </li> 
-                        <p className="uname"> Posted by {item.username} </p>
-                        <p className="date"> Posted on <Moment format='MM/DD/YY'>{item.date}</Moment></p>
+                    <div className="qtxt"> 
+                        <p> {item.qtext} </p>
+                        <p className="date"> {item.username}, <Moment format='MM/DD/YY'>{item.date}</Moment> </p>
                         <AnsForm catId={_id} questId={item._id} /> 
                     </div>
                     <div>{item.answers.map(aitem => (
                         <div className="atxt">{aitem.atext}
-                            <p className="uname"> Posted by {aitem.username} </p>
-                            <p className="date"> Posted on <Moment format='MM/DD/YY'>{aitem.date}</Moment></p>
+                            <p className="date"> {aitem.username}, <Moment format='MM/DD/YY'>{aitem.date}</Moment></p>
                         </div>
                     ))}
                     </div> <br></br>
