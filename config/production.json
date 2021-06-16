@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://rekha19:rekha19@sitedb.4owuc.mongodb.net/qasitedb?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
+}

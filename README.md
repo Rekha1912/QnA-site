@@ -21,4 +21,4 @@ Installation and Setup Instructions for the project:
 4. Run both Express & React from root: npm run dev
 5. To Visit App: localhost:3000
 
-Firebase deployed URL - 
+Heroku deployed URL - 
