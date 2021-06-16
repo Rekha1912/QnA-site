@@ -6,8 +6,7 @@ const auth = require('../../middleware/auth');
 const Quest = require('../../models/Quest');
 const User = require('../../models/User');
 
-//const checkObjectId = require('../../middleware/checkObjectId');
-
+//new quest
 router.post(
   '/',
     [ 
@@ -135,6 +134,5 @@ router.post(
     }
   }
 );
-
 
 module.exports = router;

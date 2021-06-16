@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import AnsForm from './AnsForm';
 import quest from '../../reducers/quest';
 
-
 const QuestItem = ({ auth, quest: { _id, catname, questions, answers, user, qtext, atext, date } }) =>
         <div className="mainblock">
             <h2> {catname} </h2>

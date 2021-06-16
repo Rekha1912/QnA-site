@@ -11,7 +11,7 @@ const Landing = ({ isAuthenticated }) => {
         <Fragment>
             <div className = "landing">
                 <h2> WANDERLUST </h2> 
-                <h3> Travel related questions and their answers for Top Five countries </h3>
+                <h3> Travel related questions and their answers for Top countries </h3>
                     <div>
                         <Link to = '/register' className = "btn btn-secondary but1"> Sign Up </Link> 
                         <Link to = '/login' className = "btn btn-secondary but2"> Log In </Link>
