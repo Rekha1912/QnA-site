@@ -14,11 +14,11 @@ Future improvements:
 3. Inviting friends.
 4. Link map for easy access.
 
-Installation and Setup Instructions for the project.
+Installation and Setup Instructions for the project:
+1. Clone this repository: $ git clone https://github.com/Rekha1912/QnA-site 
+2. $ cd qna-site
+3. Install: $ npm install
+4. Run both Express & React from root: npm run dev
+5. To Visit App: localhost:3000
 
-Clone this repository: $ git clone https://github.com/Rekha1912/QnA-site 
-$ cd qna-site
-Install: $ npm install
-Run both Express & React from root: npm run dev
-To Visit App: localhost:3000
 Firebase deployed URL - 
