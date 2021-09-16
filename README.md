@@ -21,4 +21,4 @@ Installation and Setup Instructions for the project:
 4. Run both Express & React from root: npm run dev
 5. To Visit App: localhost:3000
 
-Heroku deployed URL - https://fierce-tor-72211.herokuapp.com/
+Heroku deployed URL - https://boiling-wildwood-91186.herokuapp.com/
